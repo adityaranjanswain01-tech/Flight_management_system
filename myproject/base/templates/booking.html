@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{%load static%}
+{%block style %}
+<link rel="stylesheet" href="{% static 'booking.css' %}">
+{% endblock %}
+
+{% block content %}
+<center>
+    <div class="content">
+        <h1 id="head">Bookings </h1>
+     {% for i in bookingdata %}
+     <div class="details">
+        <div class="left">
+            <h2 style="color: rgb(0, 98, 255);">Name: {{i.pname}}</h2>
+            <h2>Adhar_Number: <b>{{i.p_Adhar_no}}</b></h2>
+            <h2>Age: <b>{{i.p_age}}</b></h2>
+            <h2>Seat-Class: <b> {{i.p_seat_class}}</b></h2>
+            <h2>Seat_Number: <b>{{i.seat_num}}</b></h2>
+            <h2>Email: <b>{{i.pemail}}</b></h2>
+            <h2>Phone_No: <b>{{i.p_phone_no}}</b> </h2>
+        </div>
+        <div class="mid">
+            <h2 style="color: rgb(0, 60, 255);">{{i.flight_company}}</h2>
+            <h3><b>{{i.flight_name}}|Flight_No :{{i.flight_number}}</b></h3>
+            <h2>From: <b>{{i.flight_from}}</b></h2>
+            <h2>TO: <b>{{i.flight_to}}</b></h2>
+        </div>
+       <div class="right">
+            <h2>Departure-Time: <b> {{i.flight_depaturetime}}</b></h2>
+            <h2>Date: <b>{{i.flight_date}}</b></h2>
+            <h2>Price: <b>RS {{i.flight_price}}</b></h2>
+        <a href="{% url 'update_booking' i.id %}">UPDATE</a>
+        <a href="{% url 'cancel_booking' i.id %}" style="background-color: red;color:white;">CANCEL</a>
+       </div>
+    </div>
+        <br><br>
+    {% endfor %}
+    </div>
+</center>
+{% endblock %}

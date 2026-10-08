@@ -1,0 +1,123 @@
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    width: 1000px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(230, 229, 229, 0.374);
+    margin-bottom: 20px;
+    margin-top: 30px;
+    animation: slideIn 0.5s ease-out both;
+}
+
+#head {
+    margin: 20px 0px 30px 0px;
+    color: dodgerblue;
+}
+
+.details {
+    background-color: white;
+    width: 900px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-left: 8px solid blue;
+    margin-bottom: 15px;
+    animation: fadeInUp 0.5s ease-out both;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.details:nth-child(1) { animation-delay: 0.1s; }
+.details:nth-child(2) { animation-delay: 0.25s; }
+.details:nth-child(3) { animation-delay: 0.4s; }
+
+.details:hover {
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateX(4px);
+}
+
+#cname {
+    margin-bottom: 10px;
+    color: blue;
+}
+
+.left {
+    text-align: left;
+}
+.left b {
+    font-size: 15px;
+    font-weight: 100;
+}
+.left h4 {
+    font-weight: 200;
+}
+
+.right {
+    text-align: right;
+}
+.right b {
+    font-weight: 100;
+}
+.right h3 {
+    font-size: medium;
+}
+.right a {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(5, 249, 5);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+    margin-top: 10px;
+    color: white;
+    font-weight: 900;
+    font-size: larger;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.right a:hover {
+    background-color: rgb(0, 190, 0);
+    transform: scale(1.04);
+}
+
+#search {
+    margin-top: 30px;
+    width: 600px;
+    height: 50px;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-size: larger;
+}
+
+form > button {
+    height: 35px;
+    width: 100px;
+    font-size: large;
+    border-radius: 20px;
+}

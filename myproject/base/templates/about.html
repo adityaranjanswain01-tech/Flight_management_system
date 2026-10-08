@@ -1,0 +1,66 @@
+{% extends 'main.html' %}
+
+{%load static%}
+{%block style %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="about-wrapper">
+
+    <div class="about-header">
+        <h1>✈ About Us</h1>
+        <p>We are a modern Flight Management System built to simplify flight booking, tracking, and management for airlines and passengers worldwide.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+        <div class="stat-box">
+            <h2>200+</h2>
+            <p>Flights Managed Daily</p>
+        </div>
+        <div class="stat-box">
+            <h2>50+</h2>
+            <p>Airlines Partnered</p>
+        </div>
+        <div class="stat-box">
+            <h2>100K+</h2>
+            <p>Passengers Served</p>
+        </div>
+        <div class="stat-box">
+            <h2>98%</h2>
+            <p>On-Time Performance</p>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="about-card">
+        <h2>🛫 Who We Are</h2>
+        <p>Our Flight Management System is a comprehensive platform designed to handle everything from flight scheduling and seat booking to real-time tracking and crew management. We connect airlines, airports, and passengers in one unified system.</p>
+    </div>
+
+    <div class="about-card">
+        <h2>🎯 Our Mission</h2>
+        <p>Our mission is to make air travel seamless, efficient, and accessible. We strive to provide accurate, real-time flight data and a smooth booking experience for every passenger, while helping airlines manage operations with ease.</p>
+    </div>
+
+    <div class="about-card">
+        <h2>⚙ What We Offer</h2>
+        <p>
+            ✔ Real-time flight tracking and status updates <br>
+            ✔ Easy flight search and seat booking <br>
+            ✔ Secure user accounts and booking history <br>
+            ✔ Airline and crew management tools <br>
+            ✔ Automated notifications and alerts
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h2>🌍 Why Choose Us</h2>
+        <p>We combine cutting-edge technology with a user-friendly interface to deliver a reliable and fast flight management experience. Whether you are an airline operator or a traveller, our platform is built for you.</p>
+    </div>
+
+</div>
+{% endblock %}

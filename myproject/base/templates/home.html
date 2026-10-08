@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{%load static%}
+{%block style %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<center>
+  <div class="content">
+    <form action="" method="GET">
+            <input type="search" name="search" id="search">
+            <button type="submit">Search</button>
+        </form>
+      <h1 id="head">Available Flights </h1><br>
+       {% for i in data %}
+       <div class="details">
+    <div class="left">
+        <h2 id="cname">{{i.flight_company}}</h2>
+        <h4>{{i.flight_name}} | Flight No : {{i.flight_number}} </h4>
+        <h3>From : <b>{{i.flight_from}} </b></h2>
+        <h3>TO : <b>{{i.flight_to}}</b></h2> 
+    </div>
+   <div class="right">
+        <h2>Departure : <b>{{i.flight_depaturetime}}</b> </h2>
+        <h2>Date : <b>{{i.flight_date}} </b></h2>
+        <h3>PRICE : <b> RS {{i.flight_price}} </b></h3>
+        <a href="{% url 'booking_form' i.id %}">BOOK NOW</a>
+   </div>
+ </div>
+    <br><br>
+    {% endfor %}
+  </div>
+</center>
+{% endblock %}

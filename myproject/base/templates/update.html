@@ -1,0 +1,60 @@
+{% extends 'main.html' %}
+
+{%load static%}
+{%block style %}
+<link rel="stylesheet" href="{% static 'update.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="booking_card">
+    <h1 id="head">✈️ Update booking</h1>
+     <div class="form">
+        <h2 class="head_line">Flight Details</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="">Flight Company:</label>
+            <input type="text" name="" id="" value="{{bookingdata.flight_company}}"><br>
+            <label for="">Flight Name: </label>
+            <input type="text" name="" id="" value="{{bookingdata.flight_name}}"><br>
+            <label for="">Flight Number: </label>
+            <input type="text" name="" id="" value="{{bookingdata.flight_number}}"><br>
+            <label for="">Form: </label>
+            <input type="text" name="" id="" value="{{bookingdata.flight_from}}"><br>
+            <label for="">To: </label>
+            <input type="text" name="" id="" value="{{bookingdata.flight_to}}"><br>
+            <label for="">Departure Time : </label>
+            <input type="text" name="" id="" value="{{bookingdata.flight_depaturetime}}"><br>
+            <label for="">Flight Date : </label>
+            <input type="text" name="" id="" value="{{bookingdata.flight_date}}"><br>
+            <label for="">Ticket Price</label>
+            <input type="number" name="" id="" value="{{bookingdata.flight_price}}"><br>
+        <h2 class="head_line_P">Passenger Details</h2>
+        <label for="">Your Name</label>
+        <input type="text" name="pname" id=""  value="{{bookingdata.pname}}"><br>
+        <label for="">Email</label>
+        <input type="text" name="pemail" id="" value="{{bookingdata.pemail}}"><br>
+        <label for="">Phone Number</label>
+        <input type="number" name="p_phone_no" id="" value="{{bookingdata.p_phone_no}}"><br>
+        <label for="">Adhar Number</label>
+        <input type="number" name="p_Adhar_no" id="" value="{{bookingdata.p_Adhar_no}}"><br>
+        <label for="">Age</label>
+        <input type="text" name="p_age" id="" value="{{bookingdata.p_age}}"><br>
+        <label for="">Seat Class</label>
+        <select name="p_seat_class">
+            <option value="">Select Class</option>
+            <option value="Economy">Economy</option>
+            <option value="Premium Economy">Premium Economy</option>
+            <option value="Business">Business</option>
+            <option value="First Class">First Class</option>
+        </select><br>
+        <label for="">Seat Number</label>
+        <input type="number" name="seat_num" id="" value="{{bookingdata.seat_num}}"><br>
+    <div class="btn">
+        <button type="submit">BOOK TICKET</button>
+    </div>
+        </form>
+    </div>
+   </div>
+
+
+{% endblock %}
